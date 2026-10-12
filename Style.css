@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #111;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator body */
+.calculator {
+    width: 390px;
+    background-color: #000;
+    padding: 28px 20px;
+    border-radius: 28px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Display */
+.display {
+    height: 125px;
+    background-color: #333;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    color: white;
+    font-size: 48px;
+    overflow: hidden;
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* All buttons */
+button {
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    background-color: #444;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+/* Button press effect */
+button:active {
+    transform: scale(0.92);
+}
+
+/* Clear button */
+.clear {
+    background-color: #bdbdbd;
+    color: #111;
+}
+
+/* Operator buttons */
+.operator {
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Large zero button */
+.zero {
+    grid-column: span 2;
+    border-radius: 40px;
+}
+
+/* Hover effect */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 450px) {
+
+    .calculator {
+        width: 94%;
+        padding: 25px 15px;
+    }
+
+    button {
+        height: 62px;
+        font-size: 25px;
+    }
+
+    .display {
+        height: 115px;
+        font-size: 42px;
+    }
+
+    .buttons {
+        gap: 15px;
+    }
+}
